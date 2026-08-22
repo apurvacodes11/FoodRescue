@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FoodRescue - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Our custom CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-basket2-fill"></i> FoodRescue
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.html">Donate Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="find.html">Find Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sdg.html">SDG &amp; Impact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="fr-stamp">Rescue<br />&amp; Share</div>
+      <h1>Rescue Food. Reduce Waste. Feed People.</h1>
+      <p>FoodRescue connects surplus food with people who need it.</p>
+      <a href="donate.html" class="btn btn-fr-primary btn-lg">Donate Food</a>
+      <a href="find.html" class="btn btn-fr-outline btn-lg">Find Food</a>
+    </section>
+
+    <!-- Why FoodRescue Section -->
+    <section class="fr-section">
+      <div class="container text-center">
+        <span class="fr-eyebrow">How It Works</span>
+        <h2 class="mb-5">Why FoodRescue?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="fr-card">
+              <i class="bi bi-box-seam fs-1 text-success"></i>
+              <h4>Donate</h4>
+              <p>Have surplus food? List it on FoodRescue.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="fr-card">
+              <i class="bi bi-search fs-1 text-success"></i>
+              <h4>Find</h4>
+              <p>Search available food donations near you.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="fr-card">
+              <i class="bi bi-recycle fs-1 text-success"></i>
+              <h4>Reduce Waste</h4>
+              <p>Redirect usable food instead of throwing it away.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="fr-section fr-section-alt">
+      <div class="container text-center">
+        <span class="fr-eyebrow">The Problem</span>
+        <h2>Food Waste and Food Insecurity</h2>
+        <p class="mx-auto" style="max-width: 700px">
+          Large amounts of edible food are wasted every day, while many people
+          do not have reliable access to food. FoodRescue attempts to connect
+          these two problems through a simple donation and redistribution
+          platform.
+        </p>
+      </div>
+    </section>
+
+    <!-- SDG Preview Section -->
+    <section class="fr-section">
+      <div class="container text-center">
+        <span class="fr-eyebrow">Global Goals</span>
+        <h2 class="mb-4">Our SDG Goals</h2>
+        <div class="row justify-content-center g-4">
+          <div class="col-md-4">
+            <div class="fr-card">
+              <h4>
+                <a
+                  target="_blank"
+                  href="https://www.un.org/sustainabledevelopment/hunger/"
+                  >SDG 2</a
+                >
+              </h4>
+              <p>Zero Hunger</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="fr-card">
+              <h4>
+                <a target="_blank" href="https://sdgs.un.org/goals/goal12"
+                  >SDG 12</a
+                >
+              </h4>
+              <p>Responsible Consumption and Production</p>
+            </div>
+          </div>
+        </div>
+        <a href="sdg.html" class="btn btn-fr-primary mt-4">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Small API Awareness Preview -->
+    <section class="fr-section fr-section-alt">
+      <div class="container text-center">
+        <span class="fr-eyebrow">Data Snapshot</span>
+        <h2>Global Food Security</h2>
+        <p class="mx-auto" style="max-width: 700px">
+          Food insecurity is a global issue. Explore food-security data from
+          international public data sources.
+        </p>
+        <a href="sdg.html" class="btn btn-fr-outline">View Global Data</a>
+      </div>
+    </section>
+
+    <footer>
+      <p class="mb-0">FoodRescue - A Student Micro Project</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,434 @@
+:root {
+  --fr-cream: #fbf4e8;
+  --fr-cream-deep: #f4e8d3;
+  --fr-charcoal: #2e2419;
+  --fr-text: #5b5347;
+  --fr-amber: #e08829;
+  --fr-amber-deep: #b8651a;
+  --fr-moss: #6f7d4f;
+  --fr-moss-deep: #566139;
+  --fr-white: #ffffff;
+  --fr-border: #e8dcc5;
+  --fr-shadow: 0 6px 18px rgba(46, 36, 25, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", Arial, sans-serif;
+  color: var(--fr-text);
+  background-color: var(--fr-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Fraunces", Georgia, serif;
+  color: var(--fr-charcoal);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+p {
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--fr-amber);
+  color: var(--fr-white);
+}
+
+/* ---------- labels ---------- */
+
+.fr-eyebrow {
+  display: inline-block;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fr-amber-deep);
+  margin-bottom: 10px;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  background-color: var(--fr-charcoal);
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.navbar-brand {
+  font-family: "Fraunces", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--fr-white) !important;
+}
+
+.navbar-brand i {
+  color: var(--fr-amber);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-weight: 500;
+  margin-left: 6px;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--fr-white) !important;
+}
+
+.nav-link.active {
+  color: var(--fr-white) !important;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -2px;
+  height: 2px;
+  background-color: var(--fr-amber);
+  border-radius: 2px;
+}
+
+/* ---------- Hero Section ---------- */
+
+.hero {
+  position: relative;
+  background: radial-gradient(
+    circle at 80% 20%,
+    var(--fr-cream-deep) 0%,
+    var(--fr-cream) 55%
+  );
+  padding: 90px 20px 100px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+/* Signature element: a rotated rubber-stamp badge, like a produce label */
+.fr-stamp {
+  position: absolute;
+  top: 38px;
+  right: 8%;
+  width: 108px;
+  height: 108px;
+  border: 2px dashed var(--fr-amber-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-12deg);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--fr-amber-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  text-align: center;
+  background-color: rgba(224, 136, 41, 0.06);
+}
+
+@media (max-width: 767px) {
+  .fr-stamp {
+    display: none;
+  }
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-fr-primary {
+  background-color: var(--fr-amber);
+  color: var(--fr-white);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-weight: 600;
+  margin: 5px;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.btn-fr-primary:hover {
+  background-color: var(--fr-amber-deep);
+  color: var(--fr-white);
+  transform: translateY(-1px);
+}
+
+.btn-fr-outline {
+  background-color: transparent;
+  color: var(--fr-charcoal);
+  border: 2px solid var(--fr-charcoal);
+  border-radius: 30px;
+  padding: 9px 26px;
+  font-weight: 600;
+  margin: 5px;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.btn-fr-outline:hover {
+  background-color: var(--fr-charcoal);
+  color: var(--fr-white);
+  transform: translateY(-1px);
+}
+
+/* ---------- Section Spacing ---------- */
+
+.fr-section {
+  padding: 70px 20px;
+}
+
+.fr-section-alt {
+  background-color: var(--fr-cream-deep);
+}
+
+.fr-section h2 {
+  font-size: 2rem;
+}
+
+/* ---------- Cards ---------- */
+
+.fr-card {
+  background-color: var(--fr-white);
+  border: 1px solid var(--fr-border);
+  border-radius: 14px;
+  padding: 30px 25px;
+  height: 100%;
+  text-align: center;
+  box-shadow: var(--fr-shadow);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.fr-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(46, 36, 25, 0.12);
+}
+
+.fr-card i {
+  color: var(--fr-amber);
+}
+
+.fr-card h4 {
+  margin: 14px 0 8px;
+  font-size: 1.25rem;
+}
+
+.donation-card {
+  background-color: var(--fr-white);
+  border: 1px solid var(--fr-border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: var(--fr-shadow);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(46, 36, 25, 0.1);
+}
+
+.donation-card h5 {
+  color: var(--fr-charcoal);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.donation-card p {
+  margin-bottom: 6px;
+  font-size: 0.94rem;
+}
+
+.donation-card p strong {
+  color: var(--fr-charcoal);
+}
+
+/* ---------- Status badges (pill style) ---------- */
+
+.badge-available,
+.badge-requested {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge-available {
+  background-color: rgba(111, 125, 79, 0.14);
+  color: var(--fr-moss-deep);
+}
+
+.badge-available::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--fr-moss);
+  margin-right: 7px;
+}
+
+.badge-requested {
+  background-color: rgba(91, 83, 71, 0.12);
+  color: #7a7264;
+}
+
+.badge-requested::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #a49d8d;
+  margin-right: 7px;
+}
+
+/* ---------- Forms ---------- */
+
+.fr-form-box {
+  background-color: var(--fr-white);
+  border-radius: 16px;
+  padding: 36px;
+  border: 1px solid var(--fr-border);
+  box-shadow: var(--fr-shadow);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--fr-charcoal);
+  font-size: 0.92rem;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid var(--fr-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--fr-amber);
+  box-shadow: 0 0 0 0.2rem rgba(224, 136, 41, 0.18);
+}
+
+#searchFood {
+  border: 1px solid var(--fr-border);
+  border-radius: 30px;
+  padding: 14px 24px;
+  box-shadow: var(--fr-shadow);
+}
+
+#searchFood:focus {
+  border-color: var(--fr-amber);
+  box-shadow: 0 0 0 0.2rem rgba(224, 136, 41, 0.18);
+}
+
+.alert {
+  border-radius: 12px;
+  border: none;
+}
+
+.alert-success {
+  background-color: rgba(111, 125, 79, 0.14);
+  color: var(--fr-moss-deep);
+}
+
+.alert-danger {
+  background-color: rgba(184, 101, 26, 0.12);
+  color: var(--fr-amber-deep);
+}
+
+/* ---------- Stats / Impact Cards ---------- */
+
+.stat-card {
+  background-color: var(--fr-white);
+  border: 1px solid var(--fr-border);
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: var(--fr-shadow);
+}
+
+.stat-number {
+  font-family: "Fraunces", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--fr-amber-deep);
+  line-height: 1.1;
+  margin: 6px 0;
+}
+
+/* ---------- SDG list styling ---------- */
+
+.fr-section ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.fr-section ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+}
+
+.fr-section ul li::before {
+  content: "\2022";
+  position: absolute;
+  left: 6px;
+  color: var(--fr-amber);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  background-color: var(--fr-charcoal);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}

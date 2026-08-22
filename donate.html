@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodRescue - Donate Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-basket2-fill"></i> FoodRescue
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="donate.html">Donate Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="find.html">Find Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="sdg.html">SDG &amp; Impact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+
+    <div class="text-center mb-4">
+      <span class="fr-eyebrow">List a Donation</span>
+      <h1>Donate Food</h1>
+      <p>Have surplus food? List it so someone can make use of it.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+
+        <!-- Alert placeholder -->
+        <div id="formAlert"></div>
+
+        <div class="fr-form-box">
+          <form id="donationForm">
+
+            <div class="mb-3">
+              <label for="foodName" class="form-label">Food Name</label>
+              <input type="text" class="form-control" id="foodName" placeholder="e.g. Vegetable Biryani">
+            </div>
+
+            <div class="mb-3">
+              <label for="category" class="form-label">Category</label>
+              <select class="form-select" id="category">
+                <option value="">Select Category</option>
+                <option value="Cooked Food">Cooked Food</option>
+                <option value="Packaged Food">Packaged Food</option>
+                <option value="Fruits & Vegetables">Fruits &amp; Vegetables</option>
+                <option value="Bakery">Bakery</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="quantity" placeholder="e.g. 10">
+            </div>
+
+            <div class="mb-3">
+              <label for="location" class="form-label">Location</label>
+              <input type="text" class="form-control" id="location" placeholder="e.g. Nerul">
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="expiry" class="form-label">Expiry / Best Before</label>
+                <input type="date" class="form-control" id="expiry">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="pickup" class="form-label">Pickup Time</label>
+                <input type="time" class="form-control" id="pickup">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-fr-primary w-100 mt-2">List Donation</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Your Donations Section -->
+    <div class="mt-5 text-center">
+      <span class="fr-eyebrow">Your Listings</span>
+      <h2 class="mb-4">Your Donations</h2>
+      <div id="donationsList" class="row">
+        <!-- Donation cards get inserted here by JavaScript -->
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p class="mb-0">FoodRescue - A Student Micro Project</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/donate.js"></script>
+</body>
+</html>

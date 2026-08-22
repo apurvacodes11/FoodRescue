@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodRescue - Find Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-basket2-fill"></i> FoodRescue
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.html">Donate Food</a></li>
+          <li class="nav-item"><a class="nav-link active" href="find.html">Find Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="sdg.html">SDG &amp; Impact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+
+    <div class="text-center mb-4">
+      <span class="fr-eyebrow">Browse Donations</span>
+      <h1>Find Food</h1>
+      <p>Browse available food donations and find something near you.</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-6">
+        <input type="text" id="searchFood" class="form-control form-control-lg"
+               placeholder="Search by food, category or location...">
+      </div>
+    </div>
+
+    <!-- No results message -->
+    <div id="noResults" class="alert alert-warning text-center d-none">
+      No matching donations found.
+    </div>
+
+    <!-- Donation cards -->
+    <div id="foodList" class="row g-4">
+      <!-- Donation cards get inserted here by JavaScript -->
+    </div>
+
+  </div>
+
+  <footer>
+    <p class="mb-0">FoodRescue - A Student Micro Project</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/find.js"></script>
+</body>
+</html>
